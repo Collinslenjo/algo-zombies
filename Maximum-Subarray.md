@@ -30,7 +30,7 @@ def maxSubArray(nums: list[int]) -> int:
         current_sum += i
         if current_sum > maximum_sum:
             maximum_sum = current_sum
-        elif current_sum < 0:
+        if current_sum < 0:
             current_sum = 0
     return maximum_sum
 
