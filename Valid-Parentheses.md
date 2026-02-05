@@ -38,6 +38,7 @@ Input: s = "([)]"
 Output: false
 
 ## Solution:
+
 ```py
 def isValid(s: str) -> bool:
     if len(s) < 2:
@@ -49,11 +50,14 @@ def isValid(s: str) -> bool:
     for i in s:
         if i in ["[","{","("]:
             stack.append(i)
+
         elif i in ["]","}",")"]:
             if len(stack) <= 0:
                 return False
+
             top = stack.pop()
             if parentheses[i] != top:
                 return False
+                
     return not stack
 ```
