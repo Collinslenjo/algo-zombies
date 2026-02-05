@@ -24,7 +24,7 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 ```py
 # Kadanes Algorithm
 def maxSubArray(nums: list[int]) -> int:
-    maximum_sum = sum(nums)
+    maximum_sum = nums[0]
     current_sum = 0
     for i in nums:
         current_sum += i
